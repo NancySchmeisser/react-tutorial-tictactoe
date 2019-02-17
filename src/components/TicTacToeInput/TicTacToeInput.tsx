@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './TicTacToeInput.css';
 
 
 class TicTacToeInput extends Component {
