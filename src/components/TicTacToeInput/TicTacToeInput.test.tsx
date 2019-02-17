@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
-import './TicTacToeInput.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TicTacToeInput from './TicTacToeInput';
 
-class TicTacToeInput extends Component {
-  render() {
-    return (
-      <div className="TicTacToeInput">
-       ToDo
-      </div>
-    );
-  }
-}
 
-export default TicTacToeInput;
+it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<TicTacToeInput />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+  
