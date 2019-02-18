@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Board from '../Board/Board';
+import Player from '../../Player/Player';
 
 
 interface TicTacToeState {
@@ -32,7 +33,9 @@ class TicTacToe extends Component<{}, TicTacToeState> {
         return (
 
             <div className="TicTacToe">
+            <Player name="Player 1" symbol="X" winnerSymbol={this.state.winner} currentPlayer={this.state.playersTurn}/>
             <Board handleSquareClicked={this.handleSquareClicked} state={this.state.board}/>
+            <Player name="Player 2" symbol="O" winnerSymbol={this.state.winner} currentPlayer={this.state.playersTurn}/>
             </div>
 
         );
