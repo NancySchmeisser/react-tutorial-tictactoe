@@ -22,7 +22,11 @@ class TicTacToe extends Component<{}, TicTacToeState> {
     handleSquareClicked = (index: number) => {
         var newBoard = this.state.board.slice()
         newBoard[index]=this.state.playersTurn
-        this.setState({board:newBoard})
+        this.setState(
+            {
+                board:newBoard,
+                playersTurn: this.state.playersTurn == 'X' ? 'O':'X'
+            })
     } 
     render() {
         return (

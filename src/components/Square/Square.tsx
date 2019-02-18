@@ -7,15 +7,20 @@ interface SquareProps {
     handleSquareClicked: (index: number) => void
 }
 
-class Square extends Component <SquareProps> {
+class Square extends Component<SquareProps> {
 
     render() {
         return (
-            
-            <div className="col-4 square" onClick={() =>this.props.handleSquareClicked(this.props.index)}>
+
+            <div className="col-4 square" onClick={() => {
+                if (this.props.state == "") {
+                    this.props.handleSquareClicked(this.props.index)
+                }
+            }
+            }>
                 {this.props.state}
             </div>
-            
+
         );
     }
 }
