@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import TicTacToeInput from './TicTacToeInput/TicTacToeInput';
+import Square from './Square/Square';
 
 class App extends Component {
   constructor(props: {}) {
@@ -43,7 +44,7 @@ class App extends Component {
   }*/
   render() {
     return (
-      <TicTacToeInput />
+      <Square state='O' />
       /*<div className="app-container">
          {this.state.winner ? <h1>{`The winner is ${this.state.winner}`}</h1> : null}
          <div className="board">
