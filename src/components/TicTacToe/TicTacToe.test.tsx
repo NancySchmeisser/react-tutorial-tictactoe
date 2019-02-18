@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<TicTacToe state='X'/>, div);
+    ReactDOM.render(<TicTacToe/>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 

@@ -1,18 +1,36 @@
 import React, { Component } from 'react';
+import Board from '../Board/Board';
 
 
-interface TicTacToeProps {
-    
+interface TicTacToeState {
+    board: string[];
+    playersTurn: string;
+    winner: string;
 }
 
-class TicTacToe extends Component <TicTacToeProps> {
+class TicTacToe extends Component<{}, TicTacToeState> {
+    constructor(props: {}){
+        super(props);
+
+        this.state={
+            board:["","","","","","","","",""],
+            playersTurn:"X",
+            winner:"",
+        }
+    }
+
+    handleSquareClicked = (index: number) => {
+        var newBoard = this.state.board.slice()
+        newBoard[index]=this.state.playersTurn
+        this.setState({board:newBoard})
+    } 
     render() {
         return (
-            
+
             <div className="TicTacToe">
-              
+            <Board handleSquareClicked={this.handleSquareClicked} state={this.state.board}/>
             </div>
-            
+
         );
     }
 }

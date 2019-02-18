@@ -4,6 +4,7 @@ import './Board.css';
 
 interface BoardProps {
     state: string[]
+    handleSquareClicked: (index: number) => void
 }
 
 class Board extends Component <BoardProps> {
@@ -11,7 +12,7 @@ class Board extends Component <BoardProps> {
         return (
             
             <div className="row board">
-                {this.props.state.map((squareState, index) => <Square key={index} state={squareState}/>)}
+                {this.props.state.map((squareState, index) => <Square key={index} index={index} state={squareState} handleSquareClicked={this.props.handleSquareClicked}/>)}
             </div>
 
         );

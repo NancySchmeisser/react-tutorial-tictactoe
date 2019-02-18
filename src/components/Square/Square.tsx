@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import './Square.css';
 
 interface SquareProps {
-    state: string;
+    index: number
+    state: string
+    handleSquareClicked: (index: number) => void
 }
 
 class Square extends Component <SquareProps> {
+
     render() {
         return (
             
-            <div className="col-4 square">
+            <div className="col-4 square" onClick={() =>this.props.handleSquareClicked(this.props.index)}>
                 {this.props.state}
             </div>
             
