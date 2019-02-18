@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-// import './Board.css';
+import Square from '../Square/Square';
+import './Board.css';
 
 interface BoardProps {
-    state: string;
+    state: string[]
 }
 
 class Board extends Component <BoardProps> {
     render() {
         return (
             
-            <div className="Board">
-          
+            <div className="row board">
+                {this.props.state.map((squareState, index) => <Square key={index} state={squareState}/>)}
             </div>
-            
+
         );
     }
 }

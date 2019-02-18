@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Square.css';
+import './Square.css';
 
 interface SquareProps {
     state: string;
@@ -9,8 +9,8 @@ class Square extends Component <SquareProps> {
     render() {
         return (
             
-            <div className="square">
-            {this.props.state}
+            <div className="col-4 square">
+                {this.props.state}
             </div>
             
         );
