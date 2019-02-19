@@ -3,13 +3,26 @@
     width: 200px;
     box-sizing: border-box;
     border: 5px solid black;
-    font-size: 5em;
+    font-size: 6em;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow: 8px 8px lightgray;
+    font-weight: bold;
   }
   
   .square:hover {
     cursor: pointer;
     background-color: #80cd92;
+  }
+
+  .winner {
+    background-color: lightgreen;
+  }
+
+  .player1 {
+    color: blue;
+  }
+  .player2 {
+    color: green;
   }

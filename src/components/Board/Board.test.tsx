@@ -9,12 +9,12 @@ Enzyme.configure({ adapter: new Adapter() });
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Board state={[""]}  handleSquareClicked={index=>{}}/>, div);
+    ReactDOM.render(<Board  winnerBoard={["","","","","","","","",""]} state={[""]}  handleSquareClicked={index=>{}}/>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
 it ('renders the board correctly', () =>{
-    const wrapper = mount(<Board state={["X","","","O","X","","O","",""]}  handleSquareClicked={index=>{}}/>)
+    const wrapper = mount(<Board winnerBoard={["","","","","","","","",""]} state={["X","","","O","X","","O","",""]}  handleSquareClicked={index=>{}}/>)
     const square1 = wrapper.find('Square').findWhere( square => square.key() == "0");
     expect(square1.text()).toBe('X');
     const square6 = wrapper.find('Square').findWhere(square => square.key() == "6");

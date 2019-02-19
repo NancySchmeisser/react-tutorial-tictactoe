@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Player.css';
 
 interface PlayerProps {
     name: string
@@ -18,8 +19,8 @@ class Player extends Component<PlayerProps> {
         }
         return (
 
-            <div className={"Player " + alertClass} >
-                {this.props.name} {this.props.symbol}
+            <div className={alertClass} >
+                <span className="player"  >{this.props.name} {this.props.symbol}</span>
             </div>
 
         );
